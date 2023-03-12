@@ -5,9 +5,12 @@ return(
   <Container>
     <Content>
         <CTA>
-            <CTALogoOne src='/images/cta-logo-one.png' alt=""/>
-
-          
+            <CTALogoOne src='/images/cta-logo-one.svg' alt=""/>
+            <SignUp>GET ALL THERE</SignUp>
+            <Description>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam fuga laboriosam, reiciendis doloremque mollitia, voluptatum quo dolorem eius obcaecati eveniet accusamus adipisci corrupti incidunt dolore cupiditate corporis natus officia impedit.
+            </Description>
+            <CTALogoTwo src="/images/cta-logo-two.png"/>         
         </CTA>
         <BgImage/>
     </Content>
@@ -37,7 +40,7 @@ height: 100%;
 `
 const BgImage=styled.div`
 height: 100%;
-width: 100%;
+width: 100%;  
 background-position: top;
 background-size: cover;
 background-repeat: no-repeat;
@@ -68,5 +71,36 @@ const CTALogoOne=styled.img`
     min-height: 1px;
     display: block;
     width: 100%;
+`
+const SignUp=styled.a`
+  font-weight: bold;
+  color: #f9f9f9;
+  background-color: #0063e5;
+  margin-bottom: 12px;
+  width: 100%;
+  letter-spacing: 1.5px;
+  font-size: 18px;
+  padding: 16.5px 0;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  &:hover{
+    background-color: #0483ee;
+  }
+`
+
+const Description=styled.p`
+  color: hsla(0,0%,95.3%,1);
+  font-size: 11px;
+  margin: 0 0 24px;
+  line-height: 1.5;
+  letter-spacing: 1.5px;
+`
+
+const CTALogoTwo=styled.img`
+  max-width: 600px;
+  margin-bottom: 20px;
+  vertical-align: bottom;
+  width: 100%;
+
 `
 export default Login
