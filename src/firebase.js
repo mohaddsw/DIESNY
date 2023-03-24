@@ -1,4 +1,4 @@
-
+import firebase from 'firebase'
 const firebaseConfig = {
     apiKey: "AIzaSyAyYnJ41-GVsMJjk1R5ryN9qOTNmvwfTb8",
     authDomain: "diesnyplus-clone.firebaseapp.com",
@@ -9,7 +9,7 @@ const firebaseConfig = {
   };
   
   // Initialize Firebase
-  const firebaseapp =firebase. initializeApp(firebaseConfig);
+  const firebaseapp =firebase.initializeApp(firebaseConfig);
   const db=firebaseapp.firestore()
   const auth=firebase.auth()
   const provider=new firebase.auth.GoogleAuthProvider()
