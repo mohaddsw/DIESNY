@@ -1,5 +1,14 @@
-import firebase from 'firebase'
-const firebaseConfig = {
+import { initializeApp } from "firebase/app";
+import {
+  getAuth,
+  GoogleAuthProvider
+  
+  } from "firebase/auth";
+  import { getFirestore } from "firebase/firestore";
+  import { getStorage } from "firebase/storage";
+
+  
+  const firebaseConfig = {
     apiKey: "AIzaSyAyYnJ41-GVsMJjk1R5ryN9qOTNmvwfTb8",
     authDomain: "diesnyplus-clone.firebaseapp.com",
     projectId: "diesnyplus-clone",
@@ -9,10 +18,10 @@ const firebaseConfig = {
   };
   
   // Initialize Firebase
-  const firebaseapp =firebase.initializeApp(firebaseConfig);
-  const db=firebaseapp.firestore()
-  const auth=firebase.auth()
-  const provider=new firebase.auth.GoogleAuthProvider()
-  const storage=firebase.storage()
+  initializeApp(firebaseConfig);
+  const db=getFirestore()
+  const auth=getAuth()
+  const provider=new GoogleAuthProvider()
+  const storage=getStorage()
   export {auth,provider,storage};
   export default db
