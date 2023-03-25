@@ -1,7 +1,8 @@
 import { initializeApp } from "firebase/app";
 import {
   getAuth,
-  GoogleAuthProvider
+  GoogleAuthProvider,
+  signInWithPopup
   
   } from "firebase/auth";
   import { getFirestore } from "firebase/firestore";
@@ -18,10 +19,11 @@ import {
   };
   
   // Initialize Firebase
+
   initializeApp(firebaseConfig);
   const db=getFirestore()
   const auth=getAuth()
   const provider=new GoogleAuthProvider()
   const storage=getStorage()
-  export {auth,provider,storage};
+  export {auth,provider,storage,signInWithPopup};
   export default db
