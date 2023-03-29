@@ -10,7 +10,7 @@ import { useEffect } from "react";
 
 const Header = (props) => {
   const dispatch = useDispatch();
-  const history = useNavigate();
+  const navigate = useNavigate();
   const userName = useSelector((state) => state.user.name);
   const userPhoto = useSelector((state) => state.user.photo);
 
@@ -18,7 +18,7 @@ const Header = (props) => {
     auth.onAuthStateChanged(async(user)=>{
         if(user){
             setUser(user)
-            history('/home')
+            navigate('/home')
         }
     },[userName])
   });
@@ -34,7 +34,7 @@ const Header = (props) => {
    }else if(userName){
     auth.signOut().then(res=>{
         dispatch(setSignOutState())
-        history('/')
+        navigate('/')
     })
     .catch(err=>{alert(err.message)})
    }
