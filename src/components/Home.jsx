@@ -14,14 +14,36 @@ import db from '../disneyPlusMoviesData.json'
 const Home=(props)=>{
   const dispatch=useDispatch()
   const userName=useSelector(selectUserName)
-  let recommends=[]
-  let newDisney=[]
-  let originals=[]
-  let trending=[]
+ 
   useEffect( ()=>{
-   console.log(db);
-   
-  })
+    let recommends=[]
+    let newDisneys=[]
+    let originals=[]
+    let trending=[]
+    Object.values(db.movies).map(movie=>{
+      switch(movie.type){
+        case "recommend":
+          recommends.push(movie)
+          break
+        case "new":
+          newDisneys.push(movie);
+          break;
+        case "original":
+          originals.push(movie)
+          break;
+        case "tranding":
+          trending.push(movie)
+          break;
+
+      }
+   })
+   dispatch(setMovies({
+    recommend:recommends,
+    newDisney:newDisneys,
+    original:originals,
+    tranding:trending
+   }))
+  },[userName])
 
     return(
         <Container>
