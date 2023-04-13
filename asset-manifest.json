@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/DIESNY/static/css/main.902b35ff.css",
+    "main.js": "/DIESNY/static/js/main.cc14b553.js",
+    "static/media/slick.svg": "/DIESNY/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/DIESNY/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/DIESNY/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/DIESNY/static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "/DIESNY/index.html",
+    "main.902b35ff.css.map": "/DIESNY/static/css/main.902b35ff.css.map",
+    "main.cc14b553.js.map": "/DIESNY/static/js/main.cc14b553.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.902b35ff.css",
+    "static/js/main.cc14b553.js"
+  ]
+}
